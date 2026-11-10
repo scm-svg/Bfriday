@@ -198,8 +198,8 @@ document.getElementById('kpis').innerHTML=[
  ['OFERTA TOTAL',f0(K.total),'unidades en tiendas y canales',''],
  ['TIENDAS FÍSICAS',f0(K.fis),'6 tiendas + Grand Plaz',''],
  ['CANALES DIGITALES',f0(K.dig),'Cuadro Chat Valencia y Caracas + web','re'],
- ['RECOLECTAR DEL TALLER',f0(K.rec),'antes del 16 de noviembre','re'],
- ['YA EN TIENDA',f0(K.ya),'no hay que moverlo','go'],
+ ['RECOLECTAR DEL TALLER',f0(K.rec),'-','re'],
+ ['YA EN TIENDA',f0(K.ya),,'go'],
  ['VARIANTES',f0(K.var),'modelo · color · talla','gr'],
  ['VENTA ESPERADA',f0(K.venta),'escenario 5× la venta normal','gr']
 ].map(k=>`<div class="kpi ${k[3]}"><div class="kv">${k[1]}</div><div class="kl">${k[0]}</div><div class="ks">${k[2]}</div></div>`).join('');
@@ -252,7 +252,7 @@ function setPV(i){
   document.getElementById('kpiPV').innerHTML=[
    ['TOTAL A OFERTAR',f0(p.tot),pc(p.tot/K.total)+' de la oferta',dig?'re':''],
    ['RECOLECTAR DEL TALLER',f0(p.rec),dig?'todo sale del taller':'sale del taller para esta tienda','re'],
-   ['YA EN TIENDA',f0(p.ya),dig?'este canal no tiene stock propio':'no hay que moverlo','go'],
+   ['YA EN TIENDA',f0(p.ya),dig?'este canal no tiene stock propio':'-','go'],
    ['VARIANTES',f0(p.var),'modelo · color · talla','gr'],
    ['PESO DE VENTA',p.peso==null?'—':pc(p.peso),f1(p.vm)+' und/mes','gr']
   ].map(k=>`<div class="kpi ${k[3]}"><div class="kv">${k[1]}</div><div class="kl">${k[0]}</div><div class="ks">${k[2]}</div></div>`).join('');
