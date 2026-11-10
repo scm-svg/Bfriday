@@ -196,12 +196,11 @@ document.getElementById('digrec').textContent=f0(D.pv.filter(p=>p.g==='d').reduc
 const K=D.kpi;
 document.getElementById('kpis').innerHTML=[
  ['OFERTA TOTAL',f0(K.total),'unidades en tiendas y canales',''],
- ['TIENDAS FÍSICAS',f0(K.fis),'6 tiendas + Grand Plaz',''],
+ ['TIENDAS FÍSICAS',f0(K.fis),'7 tiendas',''],
  ['CANALES DIGITALES',f0(K.dig),'Cuadro Chat Valencia y Caracas + web','re'],
  ['RECOLECTAR DEL TALLER',f0(K.rec),'-','re'],
- ['YA EN TIENDA',f0(K.ya),,'go'],
- ['VARIANTES',f0(K.var),'modelo · color · talla','gr'],
- ['VENTA ESPERADA',f0(K.venta),'escenario 5× la venta normal','gr']
+ ['YA EN TIENDA',f0(K.ya),'-','go'],
+ ['VARIANTES',f0(K.var),'modelo · color · talla','gr']
 ].map(k=>`<div class="kpi ${k[3]}"><div class="kv">${k[1]}</div><div class="kl">${k[0]}</div><div class="ks">${k[2]}</div></div>`).join('');
 
 /* ---------- barras ---------- */
